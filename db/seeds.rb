@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Coupon.destroy_all
+# 10.times do
+#     Coupon.create(store: Faker::Restaurant.name, coupon_code: Faker::Commerce.promotion_code)
+# end
+
+# #Coping the test .creates for multiple coupons
+# #Turns out the test was looking for the Store name to be included, not just the coupon code link
+# Coupon.create(coupon_code: "ASD123", store: "Chipotle")
+# Coupon.create(coupon_code: "XYZ098", store: "Jamba")
